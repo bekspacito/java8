@@ -2,15 +2,12 @@ package edu.myrza.exampleone;
 
 public class Apple{
 
-    private String name;
     private String color;
+    private int weight;
 
-    public Apple(String name) {
-        setName(name);
-    }
-
-    public String getName() {
-        return name;
+    public Apple(String color,int weight) {
+        setColor(color);
+        setWeight(weight);
     }
 
     public String getColor() {
@@ -21,7 +18,19 @@ public class Apple{
         this.color = color;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "color='" + color + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 }
