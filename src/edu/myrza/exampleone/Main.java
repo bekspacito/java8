@@ -6,15 +6,18 @@ import java.util.List;
 public class Main{
     public static void main(String[] args){
 
+        
 
 
     }
 
-    public static List<Apple> filterGreenApples(List<Apple> inventory){
+    //We added a new parameter which represents a selecting behavior e.g. ApplePredicate predicate
+    public static List<Apple> filterGreenApples(List<Apple> inventory,ApplePredicate predicate){
 
         List<Apple> result = new ArrayList<>();
         for(Apple apple : inventory){
-            if(apple.getName().equals("green"))
+            //we encapsulated away filtering behavior
+            if(predicate.test(apple))
                 result.add(apple);
         }
 
