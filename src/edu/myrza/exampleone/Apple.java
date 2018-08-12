@@ -3,9 +3,9 @@ package edu.myrza.exampleone;
 public class Apple{
 
     private String color;
-    private int weight;
+    private Integer weight;
 
-    public Apple(String color,int weight) {
+    public Apple(String color,Integer weight) {
         setColor(color);
         setWeight(weight);
     }
@@ -18,11 +18,11 @@ public class Apple{
         this.color = color;
     }
 
-    public int getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
