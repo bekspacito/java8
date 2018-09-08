@@ -7,11 +7,11 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class ComposingComparatorsExample {
+public class ComposingExamples {
 
     public static void main(String[] args){
 
-        ComposingComparatorsExample example = new ComposingComparatorsExample();
+        ComposingExamples example = new ComposingExamples();
         example.exampleFour();
 
     }
