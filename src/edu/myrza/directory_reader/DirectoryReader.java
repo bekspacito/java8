@@ -61,14 +61,15 @@ public class DirectoryReader {
         content.sort(fileComparator);
 
         System.out.println(tabs + "|");
-        for(File f : content){
+
+        content.stream().forEach(f -> {
             if(f.isDirectory()) {
                 System.out.println(tabs + "[DIR]+--" + f.getName());
                 displayContent(f, fileComparator, recursionLevel - 1, tabs + "\t\t");
-                }
+            }
             else
                 System.out.println(tabs + "[FILE]+--" + f.getName());
-        }
+        });
 
     }
 }
