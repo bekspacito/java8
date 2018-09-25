@@ -2,6 +2,7 @@ package edu.myrza.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static edu.myrza.streams.util.DishCollectionCreator.*;
@@ -187,5 +188,25 @@ public class StreamExamples {
 
     }
 
+    /**
+     * Find an arbitrary vegetarian dish
+     * */
+    public void exampleTen(List<Dish> dishes){
+
+        Optional<Dish> result = dishes.stream()
+                                        .filter(Dish::isVegetarian)
+                                        .findAny();
+
+
+    }
+
+    public void exampleEleven(List<Dish> dishes){
+
+        dishes.stream()
+                .filter(Dish::isVegetarian)
+                .findAny()
+                .ifPresent(System.out::println);
+
+    }
 
 }
