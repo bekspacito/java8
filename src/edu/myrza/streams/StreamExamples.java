@@ -1,11 +1,13 @@
 package edu.myrza.streams;
 
+import edu.myrza.util.Dish;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static edu.myrza.streams.util.DishCollectionCreator.*;
+import static edu.myrza.util.DishCollectionCreator.*;
 
 import static java.util.stream.Collectors.*;
 import static java.util.Comparator.*;

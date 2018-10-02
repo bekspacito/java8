@@ -1,6 +1,4 @@
-package edu.myrza.streams.util;
-
-import edu.myrza.streams.Dish;
+package edu.myrza.util;
 
 import java.util.Arrays;
 import java.util.List;

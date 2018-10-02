@@ -1,5 +1,7 @@
 package edu.myrza.streams;
 
+import edu.myrza.util.Dish;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;

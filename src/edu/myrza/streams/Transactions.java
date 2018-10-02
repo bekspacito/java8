@@ -1,8 +1,6 @@
 package edu.myrza.streams;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static java.util.Comparator.*;
 import static java.util.stream.Collectors.*;
@@ -10,14 +8,6 @@ import static java.util.stream.Collectors.*;
 public class Transactions {
 
     public static void main(String[] args){
-
-        exampleOne();
-        exampleTwo();
-        exampleThree();
-        exampleFive();
-        exampleSix();
-        exampleSeven();
-        exampleEight();
 
     }
 
@@ -81,7 +71,6 @@ public class Transactions {
                                      .collect(toList());
 
         names.forEach(System.out::println);
-
     }
 
     //Are any traders based in Milan?

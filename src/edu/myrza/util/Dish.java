@@ -1,4 +1,4 @@
-package edu.myrza.streams;
+package edu.myrza.util;
 
 public class Dish {
 
