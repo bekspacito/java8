@@ -16,7 +16,7 @@ public class StreamExamples {
     public static void main(String[] args){
 
         StreamExamples examples = new StreamExamples(createDishCollection());
-        examples.exampleEight();
+        examples.exampleThreeteen();
 
     }
 
@@ -208,6 +208,31 @@ public class StreamExamples {
                 .filter(Dish::isVegetarian)
                 .findAny()
                 .ifPresent(System.out::println);
+
+    }
+
+    /**
+     * Generate Fibonacci tuples
+     * example : : (0, 1), (1, 1), (1, 2), (2, 3), (3, 5), (5, 8), (8, 13), (13, 21)
+     * */
+    public void exampleTwelve(){
+
+        Stream.iterate(new int[]{0,1},t -> new int[]{t[1],t[0] + t[1]})
+              .limit(20)
+              .forEach(t -> System.out.println("(" + t[0] + "," + t[1] + ")"));
+
+    }
+
+    /**
+     * Generate Fibonacci numbers
+     * output : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+     * */
+    public void exampleThreeteen(){
+
+        Stream.iterate(new int[]{0,1},t -> new int[]{t[0] + t[1],t[0] + 2*t[1]})
+                .flatMapToInt(Arrays::stream)
+                .limit(11)
+                .forEach(n -> System.out.print(n + " "));
 
     }
 
