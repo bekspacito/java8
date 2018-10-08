@@ -82,4 +82,15 @@ public class Main{
 
     }
 
+    private static void varArgsExample(){
+
+        FuncInterface sum = args -> args[0] + args[1];
+    }
+
+}
+
+interface FuncInterface{
+
+    double exec(double ... args);
+
 }
