@@ -16,7 +16,6 @@ public class StreamExamples {
     public static void main(String[] args){
 
         StreamExamples examples = new StreamExamples(createDishCollection());
-        examples.exampleThreeteen();
 
     }
 
@@ -233,6 +232,14 @@ public class StreamExamples {
                 .flatMapToInt(Arrays::stream)
                 .limit(11)
                 .forEach(n -> System.out.print(n + " "));
+
+    }
+
+    private int fibonacci(int i){
+
+        if(i == 1) return 0;
+        if(i == 2) return 1;
+        return fibonacci(i - 1) + fibonacci(i - 2);
 
     }
 
