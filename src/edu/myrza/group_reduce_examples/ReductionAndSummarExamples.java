@@ -4,11 +4,10 @@ import edu.myrza.util.Dish;
 import static edu.myrza.util.DishCollectionCreator.*;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.*;
 
-public class Examples {
+public class ReductionAndSummarExamples {
     public static void main(String[] args){
 
         exampleThree();
@@ -25,6 +24,7 @@ public class Examples {
 
     }
 
+    //get dishes with max and min calories
     static void exampleTwo(){
 
         List<Dish> dishes = createDishCollection();
@@ -98,6 +98,5 @@ public class Examples {
 
         System.out.println("[" + menu + "]");
     }
-
 
 }
