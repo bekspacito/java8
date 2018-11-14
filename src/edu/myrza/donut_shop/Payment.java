@@ -10,4 +10,12 @@ public class Payment{
         this.card = card;
     }
 
+    //now we can combine two payments
+    public Payment combine(Payment payment){
+        if(card.equals(payment.card))
+            return new Payment(card,this.amount + payment.amount);
+        else
+            throw new  IllegalStateException("Cards dont match...");
+    }
+
 }

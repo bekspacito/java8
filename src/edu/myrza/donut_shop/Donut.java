@@ -5,7 +5,7 @@ public class Donut{
     public final int price;
 
     public Donut(){
-        price = 45;
+        price = 20;
     }
 
 }
